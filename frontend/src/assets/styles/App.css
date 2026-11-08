@@ -1,0 +1,296 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #F5F5F5; /* Gris clair comme fallback */
+}
+
+nav {
+  background-color: #0A5C36; /* Vert foncé OCP pour la barre de navigation */
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #FFFFFF; /* Texte blanc sur la barre de navigation */
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #66BB6A; /* Vert clair OCP au survol */
+}
+
+nav button {
+  margin-left: 15px;
+  padding: 8px 15px;
+  background-color: #66BB6A; /* Vert clair OCP pour le bouton de déconnexion */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #FFFFFF;
+  color: #66BB6A;
+  border: 1px solid #66BB6A;
+}
+
+/* Styles pour la page de connexion */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Pleine hauteur de la fenêtre */
+  background: url('../images/background.jpg') no-repeat center center fixed; /* Arrière-plan flou */
+  background-size: cover;
+  position: relative;
+}
+
+.login-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Couche semi-transparente pour l'effet flou */
+  backdrop-filter: blur(8px); /* Effet flou */
+  z-index: 1;
+}
+
+.login-card {
+  background-color: rgba(255, 255, 255, 0.95); /* Fond blanc avec légère transparence */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre prononcée pour l'effet modal */
+  width: 100%;
+  max-width: 400px; /* Largeur maximale de la carte */
+  position: relative;
+  z-index: 10; /* Assure que la carte est au-dessus du fond flou */
+}
+
+.login-card .logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 120px; /* Ajuste la taille du logo */
+}
+
+.login-card h2 {
+  color: #0A5C36; /* Vert foncé OCP pour le titre */
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.login-card form div {
+  margin-bottom: 20px;
+}
+
+.login-card label {
+  display: block;
+  margin-bottom: 8px;
+  color: #0A5C36; /* Vert foncé OCP pour les labels */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #0A5C36; /* Bordure vert foncé OCP */
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease; /* Animation fluide */
+}
+
+.login-card input:focus {
+  border-color: #66BB6A; /* Vert clair OCP au focus */
+  outline: none;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #66BB6A; /* Vert clair OCP pour le bouton */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Animation fluide */
+}
+
+.login-card button:hover {
+  background-color: #0A5C36; /* Vert foncé OCP au survol */
+}
+
+.login-card .error {
+  color: #D32F2F; /* Rouge pour les messages d'erreur */
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.login-card .register-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-card .register-link a {
+  color: #66BB6A; /* Vert clair OCP pour le lien */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease; /* Animation fluide */
+}
+
+.login-card .register-link a:hover {
+  color: #0A5C36; /* Vert foncé OCP au survol */
+  text-decoration: underline;
+}
+
+/* Styles pour la page d'inscription */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Pleine hauteur de la fenêtre */
+  background: url('../images/background.jpg') no-repeat center center fixed; /* Arrière-plan flou */
+  background-size: cover;
+  position: relative;
+}
+
+.register-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Couche semi-transparente pour l'effet flou */
+  backdrop-filter: blur(8px); /* Effet flou */
+  z-index: 1;
+}
+
+.register-card {
+  background-color: rgba(255, 255, 255, 0.95); /* Fond blanc avec légère transparence */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre prononcée pour l'effet modal */
+  width: 100%;
+  max-width: 500px; /* Largeur maximale de la carte (plus large pour plus de champs) */
+  position: relative;
+  z-index: 10; /* Assure que la carte est au-dessus du fond flou */
+}
+
+.register-card .logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 120px; /* Ajuste la taille du logo */
+}
+
+.register-card h2 {
+  color: #0A5C36; /* Vert foncé OCP pour le titre */
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.register-card form div {
+  margin-bottom: 20px;
+}
+
+.register-card label {
+  display: block;
+  margin-bottom: 8px;
+  color: #0A5C36; /* Vert foncé OCP pour les labels */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.register-card input,
+.register-card select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #0A5C36; /* Bordure vert foncé OCP */
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease; /* Animation fluide */
+}
+
+.register-card input:focus,
+.register-card select:focus {
+  border-color: #66BB6A; /* Vert clair OCP au focus */
+  outline: none;
+}
+
+.register-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #66BB6A; /* Vert clair OCP pour le bouton */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Animation fluide */
+}
+
+.register-card button:hover {
+  background-color: #0A5C36; /* Vert foncé OCP au survol */
+}
+
+.register-card .error {
+  color: #D32F2F; /* Rouge pour les messages d'erreur */
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.register-card .login-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-card .login-link a {
+  color: #66BB6A; /* Vert clair OCP pour le lien */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease; /* Animation fluide */
+}
+
+.register-card .login-link a:hover {
+  color: #0A5C36; /* Vert foncé OCP au survol */
+  text-decoration: underline;
+}
+
+/* Styles généraux pour les autres pages */
+form {
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
